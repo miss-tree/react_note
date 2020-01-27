@@ -1,0 +1,94 @@
+@charset "UTF-8";
+
+
+@import '~antd/dist/antd.css';
+@import './linux.css';
+
+
+.App {
+  background-color: rgb(245, 245, 246)
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+a{
+  text-decoration: none
+}
+.active,.active a{
+  color: #1890ff !important
+}
+h3,h4{
+  font-weight: bold;
+  margin-top: 20px;
+}
+.Title_h3{
+  margin-top: 0;
+}
+.App-header {
+  background-color: #222;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+}
+.header_title{
+  font-size: 20px;
+  font-weight: bold;
+  align-self: center;
+}
+.header_title a{
+  color: #fff
+}
+.App-intro {
+  font-size: large;
+}
+.title{
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+.indexPages {
+  width: 1000px;
+  margin: auto;
+  background: #fff;
+  padding: 15px;
+  padding-left: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0px 5px #ddd;
+}
+h3{
+  font-weight: bold
+}
+.content{
+  margin-top: 15px
+}
+p{
+  text-indent: 2em
+}
+b{
+  color: #1890ff;
+  font-size: 15px
+}
+
+#components-layout-demo-custom-trigger .trigger {
+  font-size: 18px;
+  line-height: 64px;
+  padding: 0 24px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+#components-layout-demo-custom-trigger .trigger:hover {
+  color: #1890ff;
+}
+
+#components-layout-demo-custom-trigger .logo {
+  height: 32px;
+  background: rgba(255, 255, 255, 0.2);
+  margin: 16px;
+}
