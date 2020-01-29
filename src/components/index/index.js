@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Icon } from 'antd';
 // import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 class index extends Component {
@@ -11,7 +12,10 @@ class index extends Component {
           </div>
           <div className="content">
             <h3 className='Title_h3'>网站终旨是前端学习笔记</h3>
-            <p>本网站以为react技术栈的学习笔记demo，主要有react、nodejs、linux的笔记，不定期添加笔记内容,打通前后端。</p>
+            <p>本网站以为react技术栈的学习笔记demo，主要有react、nodejs、linux的笔记，不定期添加笔记内容,打通前后端。
+              <a href='https://github.com/miss-tree/react_note' target='_blank'>
+              <Icon type="github" />github地址</a>
+            </p>
             <h3 className='Title_h3'>react是学习react的笔记</h3>
             <p>主要的笔记：</p>
               <ul> 

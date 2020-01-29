@@ -17,8 +17,8 @@ class base extends Component{
                     <div>npm install -g create-react-app   /  cnpm install -g create-react-app</div>
                     <div>创建项目：</div>
                     <div>create-react-app reactdemo</div>
-                    <div>npm start             yarn start运行项目</div>
-                    <div>npm run build         yarn build 生成项目</div>
+                    <div className='hang'>npm start / yarn start<span>运行项目</span></div>
+                    <div className='hang'>npm run build  / yarn build <span>生成项目</span></div>
 
                     <h3>方法二（新-未来推荐）</h3>
                     <div>安装脚手架工具后</div>

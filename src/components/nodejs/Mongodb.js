@@ -58,6 +58,12 @@ class Mongodb extends React.Component{
                     <div> mongo <span>本地连接数据库</span></div>
                     <div> mongo  47.248.36.45：27017 <span>客户端连接数据库(ip 地址:端口号)</span></div>
                 </div>
+                <h3>可视化管理工具</h3>
+                <div className="hang">
+                    <div> https://www.mongodb.com/download-center?jmp=nav#community <span>下载最新的 mongodb 安装完成后会自动安装 mongodb 可视化工具</span></div>
+                    <div> https://www.mongodb.com/products/compass <span>单独下载 mongodb 可视化工具</span></div>
+                    <div> https://www.mongodb.com/download-center?jmp=nav#compass <span>单独下载 mongodb 可视化工具</span></div>
+                </div>
             </div>
         </div>
         )
