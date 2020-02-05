@@ -3,6 +3,7 @@ import {  Route,Link } from "react-router-dom";
 // import routes from "../../router/routes"
 //antd 布局
 import { Layout, Menu, Icon } from 'antd';
+// import 'antd/es/Layout/style';
 const {  Sider, Content } = Layout;
 const { SubMenu } = Menu;
 
@@ -105,6 +106,12 @@ class index extends Component {
                   <Link to="/linux/redis">
                     <Icon type="radar-chart" />
                     <span>使用redis</span>
+                  </Link>
+                </Menu.Item>
+                <Menu.Item key="18">
+                  <Link to="/linux/Https">
+                    <Icon type="key" />
+                    <span>申请ssl证书</span>
                   </Link>
                 </Menu.Item>
               </Menu>

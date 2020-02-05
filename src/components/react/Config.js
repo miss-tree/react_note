@@ -77,6 +77,25 @@ class Config extends Component{
                     <p>必须用<span className="spanCode"><code>{`<Switch>`}</code></span>标签，Redirect必须放最后一行；
                     含义：如果上面的路由都匹配不到时，跳转到"/"页面</p>
                 </div>
+                <div>
+                    <h3>路由跳转</h3>
+                    <pre>
+                        <code>
+                            {`
+        import {  Link } from "react-router-dom";
+        ……
+        <Link to="/product">商品</Link>
+
+        跳转到主页
+        gotoHome() {
+            this.props.history.push('/home')
+        }
+  
+                            `}
+                        </code>
+                    </pre>
+                    <p><code>{``}</code></p>
+                </div>
             </div>
         );
     }

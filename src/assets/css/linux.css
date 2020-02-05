@@ -1,7 +1,8 @@
 @charset "utf-8";
 
 .linuxImg{
-    width: 100%
+    width: 100%;
+    padding: 10px 0;
 }
 .linuxImg img{
     width: 100%
@@ -18,7 +19,7 @@
     margin-left: 2em;
 }
 .code{
-    background: #000;
+    background: #283646;
     color: #fff;
     padding-left: 10px;
 }

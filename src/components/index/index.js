@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Icon } from 'antd';
+// import 'antd/es/button/style';
 // import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 class index extends Component {

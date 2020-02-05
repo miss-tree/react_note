@@ -115,8 +115,9 @@ class index extends Component {
                   <Menu.Item key="67"><Link to="/node/Template">模板引擎</Link></Menu.Item>
                   <Menu.Item key="68"><Link to="/node/Static">静态资源配置</Link></Menu.Item>
                   <Menu.Item key="69"><Link to="/node/Storage">数据存储</Link></Menu.Item>
-                  <Menu.Item key="60"><Link to="/node/node_router">路由封装</Link></Menu.Item>
-                  <Menu.Item key="61"><Link to="/node/exp_router">仿express路由</Link></Menu.Item>
+                  <Menu.Item key="62"><Link to="/node/Optimize">优化Mongodb</Link></Menu.Item>
+                  <Menu.Item key="60"><Link to="/node/KoaModule">路由封装</Link></Menu.Item>
+                  <Menu.Item key="61"><Link to="/node/KoaPro">项目模块化</Link></Menu.Item>
                 </SubMenu>
               </Menu>
             </Sider>

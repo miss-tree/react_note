@@ -72,6 +72,7 @@ class index extends Component {
                         <Menu.Item key="5"><Link to="/react/events">绑定事件/赋值</Link></Menu.Item>
                         <Menu.Item key="9"><Link to="/react/restrain">约束性组件</Link></Menu.Item>
                         <Menu.Item key="10"><Link to="/react/passval">组件传值</Link></Menu.Item>
+                        <Menu.Item key="70"><Link to="/react/State">无状态组件</Link></Menu.Item>
                       </SubMenu>
                       <Menu.Item key="11">
                         <Link to="/react/lifecycle">
@@ -91,8 +92,8 @@ class index extends Component {
                         <Menu.Item key="6"><Link to="/react/config">路由基础</Link></Menu.Item>
                         <Menu.Item key="7"><Link to="/react/trends">动态路由</Link></Menu.Item>
                         <Menu.Item key="8"><Link to="/react/nesting">路由嵌套</Link></Menu.Item>
+                        <Menu.Item key="16"><Link to="/react/Module">路由模块化</Link></Menu.Item>
                         <Menu.Item key="15"><Link to="/react/solder">路由守卫</Link></Menu.Item>
-                        <Menu.Item key="16"><Link to="/react/mould">路由模块化</Link></Menu.Item>
                       </SubMenu>
                       <SubMenu
                         key="sub3"
@@ -103,9 +104,25 @@ class index extends Component {
                           </span>
                         }
                       >
-                        <Menu.Item key="12"><Link to="/">Tom</Link></Menu.Item>
-                        <Menu.Item key="13"><Link to="/">Bill</Link></Menu.Item>
-                        <Menu.Item key="14"><Link to="/">Alex</Link></Menu.Item>
+                        <Menu.Item key="12"><Link to="/react/Redux">Redux</Link></Menu.Item>
+                        <Menu.Item key="13"><Link to="/react/Redux/Action">Action</Link></Menu.Item>
+                        <Menu.Item key="14"><Link to="/react/Redux/ActionTypes">actionTypes</Link></Menu.Item>
+                        <Menu.Item key="17"><Link to="/react/Redux/Error">常遇的坑</Link></Menu.Item>
+                        <Menu.Item key="18"><Link to="/react/Redux/Middleware">中间件</Link></Menu.Item>
+                        <Menu.Item key="19"><Link to="/react/Redux/ReactRedux">react-redux</Link></Menu.Item>
+                      </SubMenu>
+                      <SubMenu
+                        key="sub4"
+                        title={
+                          <span>
+                            <Icon type="ant-design" />
+                            <span>antd使用</span>
+                          </span>
+                        }
+                      >
+                        <Menu.Item key="22"><Link to="/react/Antd/">Tom</Link></Menu.Item>
+                        <Menu.Item key="23"><Link to="/react/Antd/">Bill</Link></Menu.Item>
+                        <Menu.Item key="24"><Link to="/react/Antd/">Alex</Link></Menu.Item>
                       </SubMenu>
                     </Menu>
                   </Sider>

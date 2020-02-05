@@ -28,6 +28,9 @@ import Middleware from "../components/nodejs/Middleware";
 import Template from "../components/nodejs/Template";
 import Static from "../components/nodejs/Static";
 import Storage from "../components/nodejs/Storage";
+import Optimize from "../components/nodejs/Optimize";
+import KoaModule from "../components/nodejs/KoaModule";
+import KoaPro from "../components/nodejs/KoaPro";
 
 
 
@@ -43,6 +46,21 @@ let Nodejs={
           {
             path: "/node/Tool",
             component: Tool,
+            exact:true    
+          },
+          {
+            path: "/node/KoaPro",
+            component: KoaPro,
+            exact:true    
+          },
+          {
+            path: "/node/KoaModule",
+            component: KoaModule,
+            exact:true    
+          },
+          {
+            path: "/node/Optimize",
+            component: Optimize,
             exact:true    
           },
           {

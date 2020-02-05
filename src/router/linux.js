@@ -16,6 +16,7 @@ import Mongodb from "../components/linux/Mongodb";
 import Mysql from "../components/linux/Mysql";
 import Nginx from "../components/linux/Nginx";
 import Redis from "../components/linux/Redis";
+import Https from "../components/linux/Https";
 
 
 let Linux={
@@ -25,6 +26,11 @@ let Linux={
         {
           path: "/linux/",
           component: SetUp,
+          exact:true    
+        },
+        {
+          path: "/linux/Https",
+          component: Https,
           exact:true    
         },
         {

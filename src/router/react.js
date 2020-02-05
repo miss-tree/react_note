@@ -11,6 +11,14 @@ import Lifecycle from "../components/react/Lifecycle";
 import Config from "../components/react/Config";
 import Trends from "../components/react/Trends";
 import Nesting from "../components/react/Nesting";
+import Module from "../components/react/Module";
+import Redux from "../components/react/Redux";
+import State from "../components/react/State";
+import Action from "../components/react/views/Action";
+import ActionTypes from "../components/react/views/ActionTypes";
+import Error from "../components/react/views/Error";
+import Middleware from "../components/react/views/Middleware";
+import ReactRedux from "../components/react/views/ReactRedux";
 
 
 
@@ -27,6 +35,46 @@ let React={
           {
             path: "/react/structure",
             component: Structure,
+            exact:true    
+          },
+          {
+            path: "/react/Redux/ReactRedux",
+            component: ReactRedux,
+            exact:true    
+          },
+          {
+            path: "/react/Redux/Middleware",
+            component: Middleware,
+            exact:true    
+          },
+          {
+            path: "/react/Redux/Error",
+            component: Error,
+            exact:true    
+          },
+          {
+            path: "/react/Redux/ActionTypes",
+            component: ActionTypes,
+            exact:true    
+          },
+          {
+            path: "/react/Redux/Action",
+            component: Action,
+            exact:true    
+          },
+          {
+            path: "/react/Redux",
+            component: Redux,
+            exact:true    
+          },
+          {
+            path: "/react/State",
+            component: State,
+            exact:true    
+          },
+          {
+            path: "/react/Module",
+            component: Module,
             exact:true    
           },
           {
