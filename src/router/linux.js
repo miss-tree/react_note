@@ -1,111 +1,93 @@
+import { lazy } from 'react';
 /*linux*/
-import linux from "../components/linux/index";
-import SetUp from "../components/linux/SetUp";
-import Tool from "../components/linux/Tool";
-import Handle from "../components/linux/Handle";
-import Catalog from "../components/linux/Catalog";
-import Config from "../components/linux/Config";
-import Viorder from "../components/linux/Viorder";
-import Pack from "../components/linux/Pack";
-import Power from "../components/linux/Power";
-import Software from "../components/linux/Software";
-import Setnode from "../components/linux/Setnode";
-import Process from "../components/linux/Process";
-import Service from "../components/linux/Service";
-import Mongodb from "../components/linux/Mongodb";
-import Mysql from "../components/linux/Mysql";
-import Nginx from "../components/linux/Nginx";
-import Redis from "../components/linux/Redis";
-import Https from "../components/linux/Https";
-
 
 let Linux={
     path: "/linux",
-    component: linux,
+    component:lazy(() => import("../components/linux/index")),
     routes:[
         {
           path: "/linux/",
-          component: SetUp,
+          component:lazy(() => import("../components/linux/SetUp")),
           exact:true    
         },
         {
           path: "/linux/Https",
-          component: Https,
+          component:lazy(() => import("../components/linux/Https")),
           exact:true    
         },
         {
           path: "/linux/Tool",
-          component: Tool,
+          component:lazy(() => import("../components/linux/Tool")),
           exact:true    
         },
         {
           path: "/linux/handle",
-          component: Handle,
+          component:lazy(() => import("../components/linux/Handle")),
           exact:true    
         },
         {
           path: "/linux/catalog",
-          component: Catalog,
+          component:lazy(() => import("../components/linux/Catalog")),
           exact:true    
         },
         {
           path: "/linux/config",
-          component: Config,
+          component:lazy(() => import("../components/linux/Config")),
           exact:true    
         },
         {
           path: "/linux/viorder",
-          component: Viorder,
+          component:lazy(() => import("../components/linux/Viorder")),
           exact:true    
         },
         {
           path: "/linux/pack",
-          component: Pack,
+          component:lazy(() => import("../components/linux/Pack")),
           exact:true    
         },
         {
           path: "/linux/power",
-          component: Power,
+          component:lazy(() => import("../components/linux/Power")),
           exact:true    
         },
         {
           path: "/linux/software",
-          component: Software,
+          component:lazy(() => import("../components/linux/Software")),
           exact:true    
         },
         {
           path: "/linux/setnode",
-          component: Setnode,
+          component:lazy(() => import("../components/linux/Setnode")),
           exact:true    
         },
         {
           path: "/linux/process",
-          component: Process,
+          component:lazy(() => import("../components/linux/Process")),
           exact:true    
         },
         {
           path: "/linux/service",
-          component: Service,
+          component:lazy(() => import("../components/linux/Service")),
           exact:true    
         },
         {
           path: "/linux/mongodb",
-          component: Mongodb,
+          component:lazy(() => import("../components/linux/Mongodb")),
           exact:true    
         },
         {
           path: "/linux/mysql",
-          component: Mysql,
+          component:lazy(() => import("../components/linux/Mysql")),
           exact:true    
         },
         {
           path: "/linux/nginx",
-          component: Nginx,
+          component:lazy(() => import("../components/linux/Nginx")),
           exact:true    
         },
         {
           path: "/linux/redis",
-          component: Redis,
+          component:lazy(() => import("../components/linux/Redis")),
           exact:true    
         },
     ]

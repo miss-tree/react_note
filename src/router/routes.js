@@ -1,9 +1,7 @@
-
-/*首页*/
-import index from "../components/index/index.js";
+import { lazy } from 'react';
 
 /*react组件路由*/
-import React from "./react";
+import ReactRouter from "./react";
 
 /*nodejs组件路由*/
 import Nodejs from "./node";
@@ -16,11 +14,11 @@ import Linux from "./linux";
 let routes = [
     {
       path: "/",
-      component: index,
+      component:lazy(() => import("../components/index/index.js")),
       exact:true
     },
   ];
-routes.push(React)
+routes.push(ReactRouter)
 routes.push(Nodejs)
 routes.push(Linux)
 

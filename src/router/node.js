@@ -1,196 +1,162 @@
-/*react*/
-import node from "../components/nodejs/index";
-import Setup from "../components/nodejs/Setup";
-import Http from "../components/nodejs/Http";
-import Urlpath from "../components/nodejs/Urlpath";
-import Fsmodule from "../components/nodejs/Fsmodule";
-import Tool from "../components/nodejs/Tool";
-import Path from "../components/nodejs/Path";
-import Querystring from "../components/nodejs/Querystring";
-import Events from "../components/nodejs/Events";
-import NodeRouter from "../components/nodejs/NodeRouter";
-import ExpRouter from "../components/nodejs/ExpRouter";
-import Mongodb from "../components/nodejs/Mongodb";
-import UseSoftware from "../components/nodejs/UseSoftware";
-import Indexes from "../components/nodejs/Indexes";
-import LinkNode from "../components/nodejs/LinkNode";
-import Express from "../components/nodejs/Express";
-import Middle from "../components/nodejs/Middle";
-import Cookie from "../components/nodejs/Cookie";
-import Session from "../components/nodejs/Session";
-import ExpMongodb from "../components/nodejs/ExpMongodb";
-import UpLoad from "../components/nodejs/UpLoad";
-import ExpRoutes from "../components/nodejs/ExpRoutes";
-import ExpPro from "../components/nodejs/ExpPro";
-import Cognition from "../components/nodejs/Cognition";
-import KoaRouter from "../components/nodejs/KoaRouter";
-import Middleware from "../components/nodejs/Middleware";
-import Template from "../components/nodejs/Template";
-import Static from "../components/nodejs/Static";
-import Storage from "../components/nodejs/Storage";
-import Optimize from "../components/nodejs/Optimize";
-import KoaModule from "../components/nodejs/KoaModule";
-import KoaPro from "../components/nodejs/KoaPro";
-
-
+import { lazy } from 'react';
 
 let Nodejs={
     path: "/node",
-      component: node,
+    component:lazy(() => import("../components/nodejs/index")),
       routes:[
           {
             path: "/node/",
-            component: Setup,
+            component:lazy(() => import("../components/nodejs/Setup")),
             exact:true    
           },
           {
             path: "/node/Tool",
-            component: Tool,
+            component:lazy(() => import("../components/nodejs/Tool")),
             exact:true    
           },
           {
             path: "/node/KoaPro",
-            component: KoaPro,
+            component:lazy(() => import("../components/nodejs/KoaPro")),
             exact:true    
           },
           {
             path: "/node/KoaModule",
-            component: KoaModule,
+            component:lazy(() => import("../components/nodejs/KoaModule")),
             exact:true    
           },
           {
             path: "/node/Optimize",
-            component: Optimize,
+            component:lazy(() => import("../components/nodejs/Optimize")),
             exact:true    
           },
           {
             path: "/node/Storage",
-            component: Storage,
+            component:lazy(() => import("../components/nodejs/Storage")),
             exact:true    
           },
           {
             path: "/node/Static",
-            component: Static,
+            component:lazy(() => import("../components/nodejs/Static")),
             exact:true    
           },
           {
             path: "/node/Template",
-            component: Template,
+            component:lazy(() => import("../components/nodejs/Template")),
             exact:true    
           },
           {
             path: "/node/Middleware",
-            component: Middleware,
+            component:lazy(() => import("../components/nodejs/Middleware")),
             exact:true    
           },
           {
             path: "/node/KoaRouter",
-            component: KoaRouter,
+            component:lazy(() => import("../components/nodejs/KoaRouter")),
             exact:true    
           },
           {
             path: "/node/Cognition",
-            component: Cognition,
+            component:lazy(() => import("../components/nodejs/Cognition")),
             exact:true    
           },
           {
             path: "/node/ExpPro",
-            component: ExpPro,
+            component:lazy(() => import("../components/nodejs/ExpPro")),
             exact:true    
           },
           {
             path: "/node/ExpRoutes",
-            component: ExpRoutes,
+            component:lazy(() => import("../components/nodejs/ExpRoutes")),
             exact:true    
           },
           {
             path: "/node/UpLoad",
-            component: UpLoad,
+            component:lazy(() => import("../components/nodejs/UpLoad")),
             exact:true    
           },
           {
             path: "/node/ExpMongodb",
-            component: ExpMongodb,
+            component:lazy(() => import("../components/nodejs/ExpMongodb")),
             exact:true    
           },
           {
             path: "/node/Session",
-            component: Session,
+            component:lazy(() => import("../components/nodejs/Session")),
             exact:true    
           },
           {
             path: "/node/Cookie",
-            component: Cookie,
+            component:lazy(() => import("../components/nodejs/Cookie")),
             exact:true    
           },
           {
             path: "/node/Middle",
-            component: Middle,
+            component:lazy(() => import("../components/nodejs/Middle")),
             exact:true    
           },
           {
             path: "/node/Express",
-            component: Express,
+            component:lazy(() => import("../components/nodejs/Express")),
             exact:true    
           },
           {
             path: "/node/LinkNode",
-            component: LinkNode,
+            component:lazy(() => import("../components/nodejs/LinkNode")),
             exact:true    
           },
           {
             path: "/node/Indexes",
-            component: Indexes,
+            component:lazy(() => import("../components/nodejs/Indexes")),
             exact:true    
           },
           {
             path: "/node/mongodb",
-            component: Mongodb,
+            component:lazy(() => import("../components/nodejs/Mongodb")),
             exact:true    
           },
           {
             path: "/node/use_software",
-            component: UseSoftware,
+            component:lazy(() => import("../components/nodejs/UseSoftware")),
             exact:true    
           },
           {
             path: "/node/http",
-            component: Http,
+            component:lazy(() => import("../components/nodejs/Http")),
             exact:true    
           },
           {
             path: "/node/urlpath",
-            component: Urlpath,
+            component:lazy(() => import("../components/nodejs/Urlpath")),
             exact:true    
           },
           {
             path: "/node/fsmodule",
-            component: Fsmodule,
+            component:lazy(() => import("../components/nodejs/Fsmodule")),
             exact:true    
           },
           {
             path: "/node/path",
-            component: Path,
+            component:lazy(() => import("../components/nodejs/Path")),
             exact:true    
           },
           {
             path: "/node/querystring",
-            component: Querystring,
+            component:lazy(() => import("../components/nodejs/Querystring")),
             exact:true    
           },
           {
             path: "/node/events",
-            component: Events,
+            component:lazy(() => import("../components/nodejs/Events")),
             exact:true    
           },
           {
             path: "/node/node_router",
-            component: NodeRouter,
+            component:lazy(() => import("../components/nodejs/NodeRouter")),
             exact:true    
           },
           {
             path: "/node/exp_router",
-            component: ExpRouter,
+            component:lazy(() => import("../components/nodejs/ExpRouter")),
             exact:true    
           },
       ]

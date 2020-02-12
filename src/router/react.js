@@ -1,125 +1,107 @@
+import { lazy } from 'react';
 /*react*/
-import react from "../components/react/index";
-import base from "../components/react/base";
-import Structure from "../components/react/Structure";
-import Bind from "../components/react/Bind";
-import MapData from "../components/react/MapData";
-import Events from "../components/react/Events";
-import Restrain from "../components/react/Restrain";
-import Passval from "../components/react/Passval";
-import Lifecycle from "../components/react/Lifecycle";
-import Config from "../components/react/Config";
-import Trends from "../components/react/Trends";
-import Nesting from "../components/react/Nesting";
-import Module from "../components/react/Module";
-import Redux from "../components/react/Redux";
-import State from "../components/react/State";
-import Action from "../components/react/views/Action";
-import ActionTypes from "../components/react/views/ActionTypes";
-import Error from "../components/react/views/Error";
-import Middleware from "../components/react/views/Middleware";
-import ReactRedux from "../components/react/views/ReactRedux";
-
-
-
-
-let React={
+let ReactRouter={
     path: "/react",
-      component: react,
+    component:lazy(() => import("../components/react/index")),
       routes:[
           {
             path: "/react/",
-            component: base,
+            component:lazy(() => import("../components/react/base")),
             exact:true    
           },
           {
             path: "/react/structure",
-            component: Structure,
+            component:lazy(() => import("../components/react/Structure")),
+            exact:true    
+          },
+          {
+            path: "/react/optimize/webpack",
+            component:lazy(() => import("../components/react/Webpack")),
             exact:true    
           },
           {
             path: "/react/Redux/ReactRedux",
-            component: ReactRedux,
+            component:lazy(() => import("../components/react/views/ReactRedux")),
             exact:true    
           },
           {
             path: "/react/Redux/Middleware",
-            component: Middleware,
+            component:lazy(() => import("../components/react/views/Middleware")),
             exact:true    
           },
           {
             path: "/react/Redux/Error",
-            component: Error,
+            component:lazy(() => import("../components/react/views/Error")),
             exact:true    
           },
           {
             path: "/react/Redux/ActionTypes",
-            component: ActionTypes,
+            component:lazy(() => import("../components/react/views/ActionTypes")),
             exact:true    
           },
           {
             path: "/react/Redux/Action",
-            component: Action,
+            component:lazy(() => import("../components/react/views/Action")),
             exact:true    
           },
           {
             path: "/react/Redux",
-            component: Redux,
+            component:lazy(() => import("../components/react/Redux")),
             exact:true    
           },
           {
             path: "/react/State",
-            component: State,
+            component:lazy(() => import("../components/react/State")),
             exact:true    
           },
           {
             path: "/react/Module",
-            component: Module,
+            component:lazy(() => import("../components/react/Module")),
             exact:true    
           },
           {
             path: "/react/bind",
-            component: Bind,
+            component:lazy(() => import("../components/react/Bind")),
             exact:true    
           },
           {
             path: "/react/mapdata",
-            component: MapData,
+            component:lazy(() => import("../components/react/MapData")),
             exact:true    
           },
           {
             path: "/react/events",
-            component: Events,
+            component:lazy(() => import("../components/react/Events")),
             exact:true    
           },
           {
             path: "/react/restrain",
-            component: Restrain,
+            component:lazy(() => import("../components/react/Restrain")),
             exact:true    
           },
           {
             path: "/react/passval",
-            component: Passval,
+            component:lazy(() => import("../components/react/Passval")),
             exact:true    
           },
           {
             path: "/react/lifecycle",
-            component: Lifecycle,
+            component:lazy(() => import("../components/react/Lifecycle")),
             exact:true    
           },
           {
             path: "/react/config",
-            component: Config,
+            component:lazy(() => import("../components/react/Config")),
             exact:true    
           },
           {
             path: "/react/trends",
-            component: Trends,
+            component:lazy(() => import("../components/react/Trends")),
             exact:true    
           },
           {
             path: "/react/nesting",
-            component: Nesting,
+            component:lazy(() => import("../components/react/Nesting")),
             exact:true    
           },
       ]
@@ -127,4 +109,4 @@ let React={
 
 
 
-export default React;
+export default ReactRouter;

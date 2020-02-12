@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component , Suspense} from 'react';
 import {  Route,Link } from "react-router-dom";
 // import routes from "../../router/routes"
 //antd 布局
@@ -99,7 +99,7 @@ class index extends Component {
                         key="sub3"
                         title={
                           <span>
-                            <Icon type="cluster" />
+                            <Icon type="deployment-unit" />
                             <span>Redux</span>
                           </span>
                         }
@@ -124,6 +124,19 @@ class index extends Component {
                         <Menu.Item key="23"><Link to="/react/Antd/">Bill</Link></Menu.Item>
                         <Menu.Item key="24"><Link to="/react/Antd/">Alex</Link></Menu.Item>
                       </SubMenu>
+                      <SubMenu
+                        key="sub5"
+                        title={
+                          <span>
+                            <Icon type="fall" />
+                            <span>项目优化</span>
+                          </span>
+                        }
+                      >
+                        <Menu.Item key="32"><Link to="/react/optimize/webpack">webpack优化</Link></Menu.Item>
+                        <Menu.Item key="33"><Link to="/react/optimize/">Bill</Link></Menu.Item>
+                        <Menu.Item key="34"><Link to="/react/optimize/">Alex</Link></Menu.Item>
+                      </SubMenu>
                     </Menu>
                   </Sider>
                   <Layout>
@@ -137,15 +150,13 @@ class index extends Component {
                     {/* <Header style={{ background: '#fff', padding: 0 }} /> */}
                     <Content style={{ margin: '24px 16px',overflow: 'initial', background: '#fff',height:this.state.height-48 }}>
                       <div style={{ padding: 20, background: '#fff', }}>
-                        {
-                          this.props.routes.map((route,key)=>{
-                              // if(route.exact){
-                                return <Route key={key} exact path={route.path} component={route.component}/>
-                              // }else{
-                              //   return <Route  key={key}  path={route.path} component={route.component}/>
-                              // }
-                          })
-                        }  
+                      <Suspense fallback={<div>Loading...</div>}>
+                          {
+                            this.props.routes.map((route,key)=>{
+                                  return <Route key={key} exact path={route.path} component={route.component}/>
+                            })
+                          }  
+                        </Suspense>
                       </div>           
                     </Content>
                   </Layout>
