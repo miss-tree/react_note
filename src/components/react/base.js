@@ -27,6 +27,12 @@ class base extends Component{
                     <p>npx create-react-app reactdemo这条命令会临时安装 create-react-app 包，命令完成后create-react-app 会删掉，不会出现在 global 中。下次再执行，还是会重新临时安装。
 	npx 会帮你执行依赖包里的二进制文件。</p>
                 </div>
+                <div>
+                    <div><span className='red'>注意</span>不管哪个方法 node版本要求10以上，否则安装后不是最新的版本会遇到各种报错。</div>
+                    <div className='linuxImg'>
+                        <img src={require('../../assets/images/react/lost01.jpg')} alt=''/>
+                    </div>
+                </div>
             </div>
         );
     }

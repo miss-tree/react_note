@@ -3,3 +3,36 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+
+.Table{
+	border: 1px solid #ccc;
+	width: 100%;
+}
+.Table .TableRow{
+	width: 100%;
+}
+.Table .TableRow+.TableRow{
+	border-top: 1px solid #ccc;
+}
+.Table .TableRow:nth-child(2n){
+	background: #F5F5F5;
+}
+.TableRow .RowLeft,.RowRight{
+	display: inline-block;
+}
+.TableRow .RowLeft{
+	text-align: left;
+	padding: 0 20px;
+	width: 200px;
+	height: 30px;
+	line-height: 30px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow:ellipsis ;
+	border-right: 1px solid #ccc;
+	vertical-align: middle;
+}
+.TableRow .RowRight{
+	padding-left: 20px;
+}

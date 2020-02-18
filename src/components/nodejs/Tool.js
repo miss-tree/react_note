@@ -1,8 +1,16 @@
 import React from "react"
+import Axios  from "../../Module/axios"
 
 
 class Tool extends React.Component{
-
+    componentDidMount(){
+        this.getMessage();
+    }
+    getMessage(){
+        Axios.get("/node/tool").then(res=>{
+            console.log(res)
+        })
+    }
     render(){
         return(
         <div>

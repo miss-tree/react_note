@@ -1,10 +1,18 @@
 import React,{Component} from "react"
-
+import Axios  from "../../Module/axios"
 
 class SetUp extends Component {
-    // constructor(props){
-    //     super(props)
-    // }
+    constructor(props){
+        super(props)
+    }
+    componentDidMount(){
+        this.getMessage()
+    }
+    getMessage(){
+        Axios.get("/linux").then(res=>{
+            console.log(res)
+        })    
+    }
     render(){
         return(
             <div>

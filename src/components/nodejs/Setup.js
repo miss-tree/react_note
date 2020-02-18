@@ -1,8 +1,23 @@
 import React from "react"
-
+import Axios  from "../../Module/axios"
 
 class Setup extends React.Component{
-
+    constructor(props){
+        super(props)
+        this.state={
+            img:""
+        }
+    }
+    componentDidMount(){
+        this.getImg()
+    }
+    getImg(){
+        Axios.get("/node").then(res=>{
+            console.log(res.data)
+            const pic =res.data[0].img
+            this.setState({img:pic})
+        })
+    }
     render(){
         return(
         <div>
@@ -88,6 +103,8 @@ class Setup extends React.Component{
                 </ul>
                 <div className="linuxImg">
                     <img src={require('../../assets/images/node/NodeJs.png')} alt=''/>
+                    <div className='red'>下面是开启node后台请求到的图片，没有开启不会请求到</div>
+                    <img src={this.state.img} alt=''/>
                 </div>
             </div>
 

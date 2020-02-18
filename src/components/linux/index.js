@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+import React, { Component , Suspense } from 'react';
 import {  Route,Link } from "react-router-dom";
-// import routes from "../../router/routes"
+import Loading from "../index/Loading"
 //antd 布局
 import { Layout, Menu, Icon } from 'antd';
 // import 'antd/es/Layout/style';
@@ -62,15 +62,15 @@ class index extends Component {
                     </span>
                   }
                 >
-                  <Menu.Item key="6"><Link to="/linux/handle">常用命令</Link></Menu.Item>
-                  <Menu.Item key="12"><Link to="/linux/service">服务命令</Link></Menu.Item>
-                  <Menu.Item key="4"><Link to="/linux/catalog">目录讲解</Link></Menu.Item>
-                  <Menu.Item key="5"><Link to="/linux/software">软件安装</Link></Menu.Item>
+                  <Menu.Item key="6"><Link to="/linux/Banner/handle">常用命令</Link></Menu.Item>
+                  <Menu.Item key="12"><Link to="/linux/Banner/service">服务命令</Link></Menu.Item>
+                  <Menu.Item key="4"><Link to="/linux/Banner/catalog">目录讲解</Link></Menu.Item>
+                  <Menu.Item key="5"><Link to="/linux/Banner/software">软件安装</Link></Menu.Item>
                   {/* <Menu.Item key="15"><Link to="/linux/install">rpm和yum</Link></Menu.Item> */}
-                  <Menu.Item key="7"><Link to="/linux/config">配置修改</Link></Menu.Item>
-                  <Menu.Item key="8"><Link to="/linux/viorder">vi/vim入门</Link></Menu.Item>
-                  <Menu.Item key="9"><Link to="/linux/pack">打包压缩</Link></Menu.Item>
-                  <Menu.Item key="11"><Link to="/linux/process">进程信息</Link></Menu.Item>
+                  <Menu.Item key="7"><Link to="/linux/Banner/config">配置修改</Link></Menu.Item>
+                  <Menu.Item key="8"><Link to="/linux/Banner/viorder">vi/vim入门</Link></Menu.Item>
+                  <Menu.Item key="9"><Link to="/linux/Banner/pack">打包压缩</Link></Menu.Item>
+                  <Menu.Item key="11"><Link to="/linux/Banner/process">进程信息</Link></Menu.Item>
                 </SubMenu>
                 <Menu.Item key="3">
                   <Link to="/linux/power">
@@ -119,11 +119,13 @@ class index extends Component {
             <Layout>
               <Content style={{ margin: '24px 16px',overflow: 'initial', background: '#fff',height:this.state.height-48 }}>
                 <div style={{ padding: 24, background: '#fff' }}>
+                <Suspense fallback={<Loading/>}> 
                   {
                     this.props.routes.map((route,key)=>{
                           return <Route key={key} exact path={route.path} component={route.component}/>
                     })
                   }  
+                </Suspense>  
                 </div>           
               </Content>
             </Layout>

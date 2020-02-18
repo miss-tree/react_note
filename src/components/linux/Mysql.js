@@ -59,7 +59,8 @@ class Mysql extends Component{
                 <div>
                     <h3>修改密码</h3>
                     <div>MySQL 官网密码策略详细说明：
-                        <a href='https://dev.mysql.com/doc/refman/5.7/en/validate-password-options-variables.html' target='_blank' title='文档'>
+                        <a href='https://dev.mysql.com/doc/refman/5.7/en/validate-password-options-variables.html'
+                         target='_blank' title='文档'  rel='nofollow me noopener noreferrer'>
                         http://dev.mysql.com/doc/refman/5.7/en/validate-password-options-variables.html#sysvar_validate_pas sword_policy
                         </a>
                     </div>

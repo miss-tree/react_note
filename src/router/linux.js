@@ -21,28 +21,28 @@ let Linux={
           exact:true    
         },
         {
-          path: "/linux/handle",
-          component:lazy(() => import("../components/linux/Handle")),
+          path: "/linux/Banner/handle",
+          component:lazy(() => import("../components/linux/Banner/Handle")),
           exact:true    
         },
         {
-          path: "/linux/catalog",
-          component:lazy(() => import("../components/linux/Catalog")),
+          path: "/linux/Banner/catalog",
+          component:lazy(() => import("../components/linux/Banner/Catalog")),
           exact:true    
         },
         {
-          path: "/linux/config",
-          component:lazy(() => import("../components/linux/Config")),
+          path: "/linux/Banner/config",
+          component:lazy(() => import("../components/linux/Banner/Config")),
           exact:true    
         },
         {
-          path: "/linux/viorder",
-          component:lazy(() => import("../components/linux/Viorder")),
+          path: "/linux/Banner/viorder",
+          component:lazy(() => import("../components/linux/Banner/Viorder")),
           exact:true    
         },
         {
-          path: "/linux/pack",
-          component:lazy(() => import("../components/linux/Pack")),
+          path: "/linux/Banner/pack",
+          component:lazy(() => import("../components/linux/Banner/Pack")),
           exact:true    
         },
         {
@@ -51,8 +51,8 @@ let Linux={
           exact:true    
         },
         {
-          path: "/linux/software",
-          component:lazy(() => import("../components/linux/Software")),
+          path: "/linux/Banner/software",
+          component:lazy(() => import("../components/linux/Banner/Software")),
           exact:true    
         },
         {
@@ -61,13 +61,13 @@ let Linux={
           exact:true    
         },
         {
-          path: "/linux/process",
-          component:lazy(() => import("../components/linux/Process")),
+          path: "/linux/Banner/process",
+          component:lazy(() => import("../components/linux/Banner/Process")),
           exact:true    
         },
         {
-          path: "/linux/service",
-          component:lazy(() => import("../components/linux/Service")),
+          path: "/linux/Banner/service",
+          component:lazy(() => import("../components/linux/Banner/Service")),
           exact:true    
         },
         {

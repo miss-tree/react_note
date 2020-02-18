@@ -1,9 +1,7 @@
 import React ,{Component} from "react";
+import './css/Structure.css'
 
 class Structure extends Component{
-    // constructor(props){
-    //      super(props)   
-    // }
     render(){
         return(
             <div>
@@ -18,12 +16,20 @@ class Structure extends Component{
                     <div>React是 React 的核心库,react只做逻辑层（主要处理数据）</div>
                     <div>ReactDOM 是提供与 DOM 相关的功能，做渲染层，去渲染实际的DOM</div>
                 </div>
-                <div>
-                    <h3>整理项目文件</h3>
-                    <div>创建assets文件存放静态资源</div>
-                    <div>创建component文件夹存放组件</div>
-                    <div>创建router文件夹存放封装的路由</div>
-                    <div>创建redux文件夹存放仓库变量</div>
+                <h3>整理项目文件</h3>
+                <div className='around'>
+                    <div style={{width:'250px'}}>
+                        <img src={require("../../assets/images/react/webpack01.jpg")} alt='' />
+                    </div>
+                    <div>
+                        <ul>
+                            <li>创建assets文件存放静态资源</li>
+                            <li>创建component文件夹存放组件</li>
+                            <li>创建router文件夹存放封装的路由</li>
+                            <li>创建redux文件夹存放仓库变量</li>
+                            <li>创建Module文件夹存放定义的方法</li>
+                        </ul>
+                    </div>
                 </div>
                 <div>
                     <h3>组件解析</h3>
@@ -43,16 +49,25 @@ class Structure extends Component{
                     <p>class Structure extends Component也可以这样写class Structure extends React.Component,这样上面就可以减少引入'{'Component'}'。
                     实例采用了ES6的语法通过class继承React，构造函数constructor也可以不写，除了组件传递信息。super关键字则是继承传递的信息。
                     this.state={}定义数据，改变state的值通过this.setState({})方法。</p>
-                    <div>最后通过export default Structure将组件导出暴露给app使用</div>
+                    <div>最后通过export default Structure 将组件导出暴露给app使用</div>
                 </div>
                 <div>
-                    <h3>修改常用设置</h3>
-                    <p>create-react-app 直接创建了脚手架，但是要修改配置要细看package.json文件的
-                        <span className="spanCode">scripts</span> 里的文件读取的
-                        <span className="spanCode">react-scripts</span> 是在node_modules里面找 react-scripts文件。
-                    </p>
-                    <div><span className="spanCode">修改端口</span> 在react-scripts/scripts/start.js文件。</div>
-                    <div><span className="spanCode">修改webpack</span> 在react-scripts/config/webpack.config.dev.js文件。</div>
+                    <h3>serviceWorker.js文件</h3>
+                    <div>
+                    Service workers 非常适合渐进式Web应用程序，它允许离线访问并优化互联网连接较差的用户。
+                但是当你不知道服务工作者正在缓存静态文件时，你会反复上传热修复程序，却发现你的网站一直没有更新。
+                修改方式，serviceWorker.js是自动生成的文件，在src/index.js:
+                    </div>
+                    <pre>
+                        <code>
+                            {`
+        // 在文件最下方将它注销掉
+        serviceWorker.unregister();  
+        
+        从16.8版本开始，默认为 serverWorker.unregister()。
+                            `}
+                        </code>
+                    </pre>
                 </div>
             </div>
         );

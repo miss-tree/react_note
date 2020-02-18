@@ -1,0 +1,7 @@
+.around{
+    display: flex;
+    justify-content: space-around;
+}
+.around div>img{
+    width: 100%;
+}
