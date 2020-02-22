@@ -39,6 +39,9 @@ const index =()=> {
               <li>linux的操作</li>
             </ul>
           </div>
+          <div className="linuxImg">
+            <img src={require('../../assets/images/webpack.png')} alt=''/>
+          </div>
         </div>
         </div>
       );

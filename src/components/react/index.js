@@ -174,7 +174,7 @@ class index extends Component {
               >
                 <Menu.Item key="32"><Link to="/react/optimize/webpack">webpack优化</Link></Menu.Item>
                 <Menu.Item key="33"><Link to="/react/optimize/CodeSplitting">路由懒加载</Link></Menu.Item>
-                <Menu.Item key="34"><Link to="/react/optimize/">-_-</Link></Menu.Item>
+                <Menu.Item key="34"><Link to="/react/optimize/Overrides">config-overrides.js</Link></Menu.Item>
               </SubMenu>
             </Menu>
           </Sider>

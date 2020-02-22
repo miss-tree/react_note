@@ -17,6 +17,12 @@ const State=(props)=>{
                 <span className="spanCode">npm i -D react-app-rewired customize-cra babel-plugin-import</span>, react-app-rewired 插件提供react额外的webpack的配置，
                 需要配合 customize-cra 使用，且 react-app-rewired 版本要求在2.0以上，最好是2.0.2以上。在根目录创建 config-overrides.js ，以antd按需加载为例，babel-plugin-import
                 是为了按需加载需要的插件。具体的使用方法可以去 npm 官网查看 customize-cra 使用方法</div>
+                <div className='red'>
+                    最好哪都不要看，不要百度，找也找不到你要的设置。看官网!看文档!看文档!!!不然你会疯掉的。
+                    <a href='https://github.com/arackaf/customize-cra/blob/master/api.md#addwebpackpluginplugin' target="_blank" rel='nofollow me noopener noreferrer'>
+                    https://github.com/arackaf/customize-cra/blob/master/api.md#addwebpackpluginplugin
+                    </a>
+                </div>
                 <pre>
                     <code>
                         {`

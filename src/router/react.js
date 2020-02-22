@@ -79,6 +79,11 @@ let ReactRouter = {
       exact: true
     },
     {
+      path: "/react/optimize/Overrides",
+      component: lazy(() => import("../components/react/optimize/Overrides")),
+      exact: true
+    },
+    {
       path: "/react/optimize/CodeSplitting",
       component: lazy(() => import("../components/react/optimize/CodeSplitting")),
       exact: true

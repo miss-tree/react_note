@@ -62,6 +62,7 @@ class Nginx extends Component{
             #text/javascript application/x-httpd-php image/jpeg image/gif image/png image/x-ms-bmp;
             gzip_types text/plain application/javascript application/x-javascript text/javascript text/xml text/css;  
             gzip_disable 'MSIE [1-6]';  # 配置禁用gzip条件，支持正则。此处表示ie6及以下不启用gzip（因为ie低版本不支持）
+           
             gzip_vary on;  #是否添加“Vary: Accept-Encoding”响应头
 
             server {
@@ -80,6 +81,7 @@ class Nginx extends Component{
                             `}
                             </code>
                         </pre>
+                        <img src={require('../../../assets/images/linux/nginx01.png')} alt=''/>
                     </div>
                     <span className="red">gzip_disable 请输入"MSIE [1-6]\." react输入报错</span>
                     <h3 >Nginx 配置代理</h3>
@@ -90,22 +92,33 @@ class Nginx extends Component{
                             {`
         upstream bakebbs {
             ip_hash; 
-            server 127.0.0.1:3001 weight=1 ; //配置服务器的权重，数值越大访问量越多，
-            server 127.0.0.1:3001 weight=3; //配置多个可以防服务器挂了而不影响服务
+            server 127.0.0.1:3001 weight=1 ; #配置服务器的权重，数值越大访问量越多，
+            server 127.0.0.1:3001 weight=3; #配置多个可以防服务器挂了而不影响服务
         }
         server { 
-        listen 80;
-        server_name www.bbb.com; 
-        location / { 
-            #设置主机头和客户端真实地址，以便服务器获取客户端真实 
-            IP proxy_set_header Host $host; 
-            proxy_set_header X-Real-IP $remote_addr; 
-            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for; 
-            #禁用缓存 
-            proxy_buffering off; 
-            #反向代理的地址 
-            proxy_pass http://127.0.0.1:3001; 
-        } 
+            gzip on;
+            gzip_static on;
+            gzip_min_length 1000;       #大于1Kb才会被压缩
+            gzip_comp_level 6;          #gzip级别
+            gzip_buffers 4 8k;          #压缩的缓存区
+            #压缩的类型
+            gzip_types text/plain application/xml text/css text/js text/xml application/x-javascript text/javascript application/json application/xml+rss image/jpeg image/png image/g
+            gzip_vary on;   # 是否在http header中添加Vary: Accept-Encoding，建议开启
+            listen 80;
+            listen 443 ssl http2;       //开启http2
+
+            server_name www.bbb.com; 
+            location / { 
+                #设置主机头和客户端真实地址，以便服务器获取客户端真实 
+                IP proxy_set_header Host $host; 
+                proxy_set_header X-Real-IP $remote_addr; 
+                proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for; 
+                #禁用缓存 
+                proxy_buffering off; 
+                #反向代理的地址 
+                proxy_pass http://127.0.0.1:3001; 
+            } 
+        }
                             `}
                             </code>
                         </pre>
