@@ -140,6 +140,11 @@ let Nodejs={
             exact:true    
           },
           {
+            path: "/node/Banner/EventLoop",
+            component:lazy(() => import("../components/nodejs/Banner/EventLoop")),
+            exact:true    
+          },
+          {
             path: "/node/Banner/path",
             component:lazy(() => import("../components/nodejs/Banner/Path")),
             exact:true    

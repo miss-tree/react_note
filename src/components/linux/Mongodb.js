@@ -17,6 +17,7 @@ class Mongodb extends Component{
                 {name:"yum install -y mongodb-org",explain:"安装 mongodb"},
                 {name:"systemctl start mongod",explain:"开启 mongodb 服务"},
                 {name:"systemctl enable mongod",explain:"设置开机启动 mongodb"},
+                {name:"mongo",explain:"运行mongodb，后面就和在本地一样的方法"},
                 {name:"systemctl stop mongod",explain:"停止 mongodb 服务"},
                 {name:"systemctl restart mongod",explain:"重启 mongodb 服务"},
             ],
