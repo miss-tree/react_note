@@ -64,3 +64,6 @@ pre{
     margin: 2px 0;
     color:#fff;
 }
+li~li{
+    margin-top: 8px;
+}

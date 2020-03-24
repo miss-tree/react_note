@@ -5,6 +5,11 @@ let ReactRouter = {
   component: lazy(() => import("../components/react/index")),
   routes: [{
       path: "/react/",
+      component: lazy(() => import("../components/react/home.js")),
+      exact: true
+    },
+    {
+      path: "/react/set",
       component: lazy(() => import("../components/react/base")),
       exact: true
     },
@@ -26,6 +31,11 @@ let ReactRouter = {
     {
       path: "/react/ReactRouter/solder",
       component: lazy(() => import("../components/react/ReactRouter/guard")),
+      exact: true
+    },
+    {
+      path: "/react/Knowledge/Css",
+      component: lazy(() => import("../components/react/Knowledge/Css")),
       exact: true
     },
     {

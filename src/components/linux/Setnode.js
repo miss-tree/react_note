@@ -6,7 +6,7 @@ class Setnode extends Component{
         super(props)
         this.state={
             msg:[
-                {name:"wget https://nodejs.org/dist/v8.9.3/node-v8.9.3-linux-x64.tar.xz",explain:"官网下载 nodejs"},
+                {name:"wget https://nodejs.org/dist/v12.16.0/node-v12.16.0-linux-x64.tar.xz",explain:"官网下载 nodejs"},
                 {name:"xz -d node-v8.9.3-linux-x64.tar.xz",explain:"减压"},
                 {name:"tar -xvf node-v8.9.3-linux-x64.tar",explain:"减压"},
                 {name:"mv node-v8.9.3-linux-x64 /usr/local/nodejs",explain:"移动到全局的安装文件夹"},

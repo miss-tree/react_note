@@ -50,6 +50,12 @@ class index extends Component {
             <Menu theme="dark" mode="inline" defaultSelectedKeys={['1']}>
               <Menu.Item key="1">
                 <Link to="/react/">
+                  <Icon type="ie" />
+                  <span> 首页</span>
+                </Link>
+              </Menu.Item>
+              <Menu.Item key="99">
+                <Link to="/react/set">
                 <Icon type="setting" />
                   <span> react安装</span>
                 </Link>
@@ -60,12 +66,6 @@ class index extends Component {
                   <span> react结构分析</span>
                 </Link>
               </Menu.Item>
-              {/* <Menu.Item key="99">
-                <Link to="/react/Loading">
-                  <Icon type="aliyun" />
-                  <span> loading</span>
-                </Link>
-              </Menu.Item> */}
               <SubMenu
                 key="sub1"
                 title={
@@ -133,6 +133,7 @@ class index extends Component {
                   </span>
                 }
               >
+                <Menu.Item key="202"><Link to="/react/Knowledge/Css">css问题</Link></Menu.Item>
                 <Menu.Item key="204"><Link to="/react/Knowledge/CrossDomain">前端跨域</Link></Menu.Item>
                 <Menu.Item key="203"><Link to="/react/Knowledge/Pack">打包问题</Link></Menu.Item>
                 <Menu.Item key="206"><Link to="/react/Knowledge/PureComponent">PureComponent</Link></Menu.Item>

@@ -9,8 +9,9 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = { 
-      tab:[{link:"/",name:"Welcome to React"},
-            {link:"/react",name:"React"},
+      tab:[
+            {link:"/react",name:"Welcome to React"},
+            {link:"/three",name:"Three.js"},
             {link:"/node",name:"nodejs"},
             {link:"/linux",name:"linux"},
           ],
