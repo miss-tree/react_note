@@ -1,7 +1,7 @@
 import React, { Component , Suspense} from 'react';
 import logo from './logo.svg';
 import routes from "./router/routes"
-import { HashRouter as Router, Route, Link } from "react-router-dom";
+import { HashRouter as Router, Route, Link } from "react-router-dom";// BrowserRouter HashRouter
 import { Spin, Alert } from 'antd';
 import './assets/css/App.css';
 
@@ -39,7 +39,7 @@ class App extends Component {
             })
           }
         </div>
-        {/* 变更内容 */}
+        {/* 变更内容  实现多个优先级*/}
         <Suspense fallback={<Spin tip="Loading..."> 
                               <Alert message="加载中"  description="请耐心等待"  type="info"/>
                             </Spin>}>

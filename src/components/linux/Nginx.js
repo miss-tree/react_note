@@ -1,7 +1,7 @@
 import React , {Component} from "react"
 import {  Link } from "react-router-dom"
 
-
+import Question from "./views/Question"
 class Nginx extends Component{
     constructor(props){
         super(props)
@@ -40,6 +40,7 @@ class Nginx extends Component{
                     <div className="red">准备工作：1、关闭 Selinux 2、开启防火墙对应端口</div>
 
                     <div>安装及详情配置，<Link to="/linux/Banner/software">请看Nginx配置</Link> </div>
+					<Question/>
                 </div>
             </div>
         )

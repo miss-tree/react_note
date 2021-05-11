@@ -15,6 +15,14 @@ const home =()=> {
               <a href='https://github.com/miss-tree/react_note' target='_blank' rel='nofollow me noopener noreferrer'>
               <Icon type="github" />github地址</a>
             </p>
+            <div>
+              html地址：<a href='http://47.113.195.11/demo' target='_blank' rel='nofollow me noopener noreferrer'>
+              http://47.113.195.11/demo/</a>
+            </div>
+            <div>
+              vue地址：<a href='http://47.113.195.11/vue' target='_blank' rel='nofollow me noopener noreferrer'>
+              http://47.113.195.11/vue/</a>
+            </div>
             <div className="hang"> npm i 即可，node服务也是同一个package.json，开启serve下的App.js服务即可开启后端服务</div>
             <h3 className='Title_h3'>react是学习react的笔记</h3>
             <p>主要的笔记：</p>

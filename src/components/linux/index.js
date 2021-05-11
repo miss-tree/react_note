@@ -64,13 +64,13 @@ class index extends Component {
                 >
                   <Menu.Item key="6"><Link to="/linux/Banner/handle">常用命令</Link></Menu.Item>
                   <Menu.Item key="12"><Link to="/linux/Banner/service">服务命令</Link></Menu.Item>
+                  <Menu.Item key="11"><Link to="/linux/Banner/process">进程信息</Link></Menu.Item>
+                  <Menu.Item key="15"><Link to="/linux/Banner/pstree">系统信息</Link></Menu.Item>
                   <Menu.Item key="4"><Link to="/linux/Banner/catalog">目录讲解</Link></Menu.Item>
                   <Menu.Item key="5"><Link to="/linux/Banner/software">软件安装</Link></Menu.Item>
-                  {/* <Menu.Item key="15"><Link to="/linux/install">rpm和yum</Link></Menu.Item> */}
                   <Menu.Item key="7"><Link to="/linux/Banner/config">配置修改</Link></Menu.Item>
                   <Menu.Item key="8"><Link to="/linux/Banner/viorder">vi/vim入门</Link></Menu.Item>
                   <Menu.Item key="9"><Link to="/linux/Banner/pack">打包压缩</Link></Menu.Item>
-                  <Menu.Item key="11"><Link to="/linux/Banner/process">进程信息</Link></Menu.Item>
                 </SubMenu>
                 <Menu.Item key="3">
                   <Link to="/linux/power">

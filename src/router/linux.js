@@ -41,6 +41,11 @@ let Linux={
           exact:true    
         },
         {
+          path: "/linux/Banner/pstree",
+          component:lazy(() => import("../components/linux/Banner/pstree")),
+          exact:true    
+        },
+        {
           path: "/linux/Banner/pack",
           component:lazy(() => import("../components/linux/Banner/Pack")),
           exact:true    

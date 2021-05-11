@@ -1,7 +1,7 @@
 const koa=require('koa'); 
 const router =require('koa-router')()
 const static = require('koa-static')
-// const bodyParser = require('koa-bodyparser');
+const bodyParser = require('koa-bodyparser');
 const app=new koa(); 
 
 
@@ -9,15 +9,19 @@ const app=new koa();
 app.use(static(__dirname + '/static'));
 
 
+app.use(bodyParser());
+
+
 // 引入路由
 const react = require('./routes/react')
 const node = require('./routes/node')
 const linux = require('./routes/linux')
+const user = require('./routes/user')
 
 //配置跨域中间件 （可以先当做路由） 
 app.use( async (ctx,next)=>{ 
     ctx.set('Access-Control-Allow-Origin', '*');//设置跨域
-    ctx.set('Access-Control-Allow-Headers', 'Content-Type, Content-Length, Authorization, Accept, X-Requested-With , yourHeaderFeild');
+    ctx.set('Access-Control-Allow-Headers', 'Content-Type, Content-Length, Authorization, Accept, X-Requested-With , x-token');
     ctx.set('Access-Control-Allow-Methods', 'PUT, POST, GET, DELETE, OPTIONS');
     const IP="http://47.92.116.232:5000";//配置全局变量
     ctx.state = Object.assign(ctx.state, { IP });
@@ -34,6 +38,7 @@ app.use( async (ctx,next)=>{
 router.use('/react',react);
 router.use('/node',node);
 router.use('/linux',linux);
+router.use('/user',user);
 
 
 //启动路由

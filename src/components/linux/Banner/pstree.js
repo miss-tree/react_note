@@ -1,22 +1,22 @@
 import React , {Component} from "react"
 
-class Plist extends Component{
+class Pstree extends Component{
     constructor(props){
         super(props)
         this.state={
             msg:[
-                {name:"PID",explain:"进程 id"},
-                {name:"USER",explain:"进程所有者"},
-                {name:"PR",explain:"进程优先级"},
-                {name:"NI",explain:"nice 值。负值表示高优先级，正值表示低优先级"},
-                {name:"VIRT",explain:"进程使用的虚拟内存总量，单位 kb。VIRT=SWAP+RES"},
-                {name:"RES",explain:"进程使用的、未被换出的物理内存大小，单位 kb。RES=CODE+DATA"},
-                {name:"SHR",explain:"共享内存大小，单位 kb"},
-                {name:"S",explain:"进程状态。D=不可中断的睡眠状态 R=运行 S=睡眠 T=跟踪/停止 Z=僵尸进程"},
-                {name:"%CPU",explain:"上次更新到现在的 CPU 时间占用百分比"},
-                {name:"%MEM",explain:"进程使用的物理内存百分比"},
-                {name:"TIME+",explain:"进程使用的 CPU 时间总计，单位 1/100 秒"},
-                {name:"COMMAND",explain:"进程名称（命令名/命令行）"},
+                {name:"uname -a",explain:"查看内核/操作系统/CPU信息 "},
+                {name:"cat /proc/cpuinfo",explain:"查看CPU信息"},
+                {name:"hostname",explain:"查看计算机名"},
+                {name:"env",explain:"查看环境变量资源 "},
+                {name:"free -m",explain:"查看内存使用量和交换区使用量"},
+                {name:"df -h",explain:"查看各分区使用情况"},
+                {name:"grep MemTotal /proc/meminfo",explain:"查看内存总量 "},
+                {name:"grep MemFree /proc/meminfo",explain:"查看空闲内存量"},
+                {name:"ifconfig",explain:"查看所有网络接口的属性"},
+                {name:"iptables -L",explain:"查看防火墙设置"},
+                {name:"route -n",explain:"查看路由表"},
+                {name:"ps -ef",explain:"查看所有进程"},
             ],
             ttmsg:[
                 {name:"who",explain:"显示当前正在系统中的所有用户名字，使用终端设备号，注册时间"},
@@ -30,6 +30,15 @@ class Plist extends Component{
                 {name:"pkill httpd",explain:"pkill 进程的名字(关闭)"},
                 {name:"kill 2245",explain:"kill 进程号(关闭)"},
                 {name:"kill -9 1234",explain:"kill -9 进程号 强制杀死"},
+            ],
+            psmsg:[
+                {name:"netstat -ntlp",explain:"查看当前所有tcp端口"},
+                {name:"netstat -s",explain:"查看网络统计信息进程"},
+                {name:"netstat -antp",explain:"查看所有已经建立的连接"},
+                {name:"netstat -lntp",explain:"查看所有监听端口"},
+                {name:"netstat -ntulp | grep 80",explain:"查看所有80端口使用情况"},
+                {name:"lsof -i",explain:"查看所有端口占用情况(包括系统的)"},
+                {name:"lsof -i:5000",explain:"查看端口5000占用情况"},
             ]
         }
     }
@@ -37,11 +46,8 @@ class Plist extends Component{
         return(
             <div>
                 <div>
-                    <h3>top 命令的第六行</h3>
-                    <div className="lineCode">
-                    <span>PID</span> USER<span>PR</span> NI <span>VIRT</span> &nbsp;RES <span>SHR S</span>%CPU<span>%MEM</span>TIME+ <span> COMMAND</span>
-                    </div>
-                    <div className="balance">
+                    <h3>系统信息命令(常用)</h3>
+                    <div className="code">
                         {
                             this.state.msg.map((el,key)=>{
                                 return (
@@ -86,6 +92,18 @@ class Plist extends Component{
                 </div>
                 <div>
                     <h3>查看端口</h3>
+                    <div className="code">
+                        {
+                            this.state.psmsg.map((el,key)=>{
+                                return (
+                                    <div className="hang" key={key}>
+                                        <b>{el.name}</b>
+                                        <span>{el.explain} </span>
+                                    </div>
+                                )
+                            })
+                        }
+                    </div>
                     <div >
                         <img src={require('../../../assets/images/linux/netstat01.jpg')} alt=''/>
                     </div>
@@ -100,4 +118,4 @@ class Plist extends Component{
         )
     }
 }
-export default Plist;
+export default Pstree;
