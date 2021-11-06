@@ -74,6 +74,11 @@ let ReactRouter = {
       exact: true
     },
     {
+      path: "/react/Banner/slotComponent",
+      component: lazy(() => import("../components/react/Banner/slotComponent")),
+      exact: true
+    },
+    {
       path: "/react/Banner/HighComponent",
       component: lazy(() => import("../components/react/Banner/HighComponent")),
       exact: true
@@ -129,6 +134,11 @@ let ReactRouter = {
       exact: true
     },
     {
+      path: "/react/Redux/MountStore",
+      component: lazy(() => import("../components/react/views/MountStore")),
+      exact: true
+    },
+    {
       path: "/react/Redux/Action",
       component: lazy(() => import("../components/react/views/Action")),
       exact: true
@@ -136,6 +146,11 @@ let ReactRouter = {
     {
       path: "/react/Redux",
       component: lazy(() => import("../components/react/views/Redux")),
+      exact: true
+    },
+    {
+      path: "/react/Banner/setStateVal",
+      component: lazy(() => import("../components/react/Banner/setStateVal")),
       exact: true
     },
     {
@@ -151,6 +166,11 @@ let ReactRouter = {
     {
       path: "/react/Banner/bind",
       component: lazy(() => import("../components/react/Banner/Bind")),
+      exact: true
+    },
+    {
+      path: "/react/Banner/style",
+      component: lazy(() => import("../components/react/Banner/Style")),
       exact: true
     },
     {

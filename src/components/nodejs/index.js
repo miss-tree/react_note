@@ -73,7 +73,7 @@ class index extends Component {
                 <Menu.Item key="7"><Link to="/node/Banner/path">path模块</Link></Menu.Item>
                 <Menu.Item key="8"><Link to="/node/Banner/querystring">querystring模块</Link></Menu.Item>
                 <Menu.Item key="9"><Link to="/node/Banner/events">事件驱动</Link></Menu.Item>
-                <Menu.Item key="9"><Link to="/node/Banner/EventLoop">事件循环</Link></Menu.Item>
+                <Menu.Item key="99"><Link to="/node/Banner/EventLoop">事件循环</Link></Menu.Item>
                 <Menu.Item key="10"><Link to="/node/Banner/node_router">路由封装</Link></Menu.Item>
                 <Menu.Item key="11"><Link to="/node/Banner/exp_router">仿express路由</Link></Menu.Item>
               </SubMenu>

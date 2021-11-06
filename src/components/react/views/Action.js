@@ -1,6 +1,23 @@
 import React, { Component } from 'react'
+import { message, Button } from 'antd';
+import store from "../../../store/index"
 
 export default class Action extends Component {
+    
+    componentDidMount(){
+        console.log("store.getState()",store.getState(),store);
+        store.subscribe(()=>{
+            // consloe.log("state发生了变化")
+            this.forceUpdate()//更新视图
+        })
+    }
+    changeVal(){
+        const action={
+            type:'actionVal',//订阅的名称
+            value:"改变的值==>hello",//改变的值
+        }
+        store.dispatch(action)
+    }   
     render() {
         return (
             <div>
@@ -22,13 +39,20 @@ export default class Action extends Component {
 
         (最新使用方法)
         组件
+        componentDidMount(){
+            store.subscribe(()=>{//订阅事件，store发生改变更新视图
+                this.forceUpdate()//更新视图
+            })
+        }
         changeVal(){
             const action={
                 type:'actionVal',//订阅的名称
-                value:"hello",//改变的值
+                value:"改变的值==>hello",//改变的值
             }
             store.dispatch(action)
-        }           
+        }     
+        <div>state值：{store.getState().title}</div>
+        <Button onClick={this.changeVal}>action</Button>
         
         reducer.js
         const defaultState={
@@ -46,6 +70,23 @@ export default class Action extends Component {
             return state
         }
                             `}
+                        </code>
+                    </pre>
+                    <div>state值：{store.getState().title}</div>
+                    <Button onClick={this.changeVal}>redux action</Button>
+                    <div>若是在全局index.js 中则变成：</div>
+                    <pre>
+                        <code>
+                        {`
+        import store from "./store/index"
+
+        let render=ReactDOM.render(
+            <App />,
+            document.getElementById('root')
+        );
+
+        store.subscribe(render)
+                        `}
                         </code>
                     </pre>
                 </div>

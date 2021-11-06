@@ -1,4 +1,5 @@
 import React ,{Component} from "react";
+import { message, Button } from 'antd';
 
 class Events extends Component{
     render(){
@@ -56,23 +57,7 @@ class Events extends Component{
                         </code>
                     </pre>
                 </div>
-                <div>
-                    <h3 >改变state数据赋值</h3>
-                    <pre>
-                        <code>
-                            {`
-    setData=()=>{
-        this.setState({//改变state的值
-            msg:"我是一个home组件 这是改变后的值"
-        }),
-        //第二个参数是回调函数，在setState函数调用完成并且组件开始重渲染时调用，可用来监听渲染是否完成或其他事件
-        () => console.log('这是回调函数')
-    }
-                            `}
-                        </code>
-                    </pre>
-                    <p>小程序的数据赋值就是根据此方法</p>
-                </div>
+                
                 <div>
                     <h3 >input事件</h3>
                     <pre>

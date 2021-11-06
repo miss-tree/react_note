@@ -76,8 +76,10 @@ class index extends Component {
                 }
               >
                 <Menu.Item key="3"><Link to="/react/Banner/bind">绑定属性</Link></Menu.Item>
+                <Menu.Item key="3ss"><Link to="/react/Banner/style">样式设置</Link></Menu.Item>
                 <Menu.Item key="4"><Link to="/react/Banner/mapdata">遍历数据/组件</Link></Menu.Item>
                 <Menu.Item key="5"><Link to="/react/Banner/events">绑定事件/赋值</Link></Menu.Item>
+                <Menu.Item key="2l"><Link to="/react/Banner/setStateVal">setState()</Link></Menu.Item>
                 <Menu.Item key="9"><Link to="/react/Banner/restrain">约束性组件</Link></Menu.Item>
                 <Menu.Item key="10"><Link to="/react/Banner/passval">组件传值</Link></Menu.Item>
                 <Menu.Item key="41"><Link to="/react/Banner/Context">Context</Link></Menu.Item>
@@ -85,6 +87,7 @@ class index extends Component {
                 <Menu.Item key="42"><Link to="/react/Banner/Hook">Hook</Link></Menu.Item>
                 <Menu.Item key="43"><Link to="/react/Banner/HighComponent">高阶组件</Link></Menu.Item>
                 <Menu.Item key="44"><Link to="/react/Banner/inherit">组合 vs 继承</Link></Menu.Item>
+                <Menu.Item key="45"><Link to="/react/Banner/slotComponent">插槽二</Link></Menu.Item>
               </SubMenu>
               <Menu.Item key="11">
                 <Link to="/react/lifecycle">
@@ -118,6 +121,7 @@ class index extends Component {
               >
                 <Menu.Item key="12"><Link to="/react/Redux">Redux</Link></Menu.Item>
                 <Menu.Item key="13"><Link to="/react/Redux/Action">Action</Link></Menu.Item>
+                <Menu.Item key="s3"><Link to="/react/Redux/MountStore">全局挂载Store</Link></Menu.Item>
                 <Menu.Item key="14"><Link to="/react/Redux/ActionTypes">actionTypes</Link></Menu.Item>
                 <Menu.Item key="17"><Link to="/react/Redux/Error">常遇的坑</Link></Menu.Item>
                 <Menu.Item key="18"><Link to="/react/Redux/Middleware">中间件</Link></Menu.Item>

@@ -48,7 +48,7 @@ class Passval extends Component{
 
     //子组件Header
     constructor(props){
-        super(props);   //国定写法
+        super(props);   //固定写法
     }
     getNews=()=>{
         // alert(this.props.news.state.msg);

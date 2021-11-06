@@ -1,12 +1,14 @@
 import React, { Component } from 'react'
 import UseHook from "./UseHook"
+
 export default class Hook extends Component {
     render() {
         // const template='You clicked ${count} times';
         return (
             <div>
                 <div>
-                    <h3 className='Title_h3'>Hook</h3>    
+                    <h3 className='Title_h3'>
+                      Hook</h3>    
                     <p>
                         Hook 是 React 16.8 的新增特性。它可以让你在不编写 class 的情况下使用 state 以及其他的 React 特性。
                         Hook 在 class 内部是不起作用的，但你可以使用它们来取代 class 。很多时候我们称为"无状态组件"，使用

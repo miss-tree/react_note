@@ -49,6 +49,36 @@ class Config extends Component{
                     <span className="red">注意</span>
                     exact表示严格匹配，否则Home组件将在所有路由页面出现，替代将要渲染的组件.
                     <div>Switch 表示会将显示的下面的组件只显示第一个，避免出现404页面</div>
+                    <div>Route 渲染内容的三种方式：children、component、render</div>
+                    <hr></hr>
+                    <p>
+                        这三种方式在路由中互斥只显示一种，优先级为：children&gt;component&gt;render。
+                        其中children和render接收一个函数，component接收一个组件。但是还是有一些差异
+                    </p>
+                    <ul>
+                        <li>children:不管路由是否匹配都渲染children函数内组件，其他和render一致</li>
+                        <li>render：只在路由匹配的时候调用渲染</li>
+                        <li>component：只在路由匹配的时候调用渲染</li>
+                    </ul>
+                    <hr></hr>
+                    <pre>
+                        <code>
+                            {`
+        import { HashRouter as Router, Route, Link , Switch } from "react-router-dom";
+        <Router>
+            <Switch>
+                。。。。。
+                <Route exact path="/" 
+                component={Home} 
+                children={()=><div>children content</div>}
+                render={()=><div>render content</div>}
+                />
+                。。。。。
+            </Switch>   
+        </Router>   
+                            `}
+                        </code>
+                    </pre>
                 </div>
                 <div>
                     <h3>路由重定向</h3>

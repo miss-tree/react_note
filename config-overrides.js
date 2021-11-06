@@ -21,7 +21,7 @@ module.exports = override(
               filename: '[path][base].gz', 
               algorithm: 'gzip',
               test: new RegExp('\\.(' + productionGzipExtensions.join('|') + ')$'),
-              threshold: 1024*20,
+              threshold: 1024*10,
               minRatio: 0.8
             }), 
         new BundleAnalyzerPlugin({
