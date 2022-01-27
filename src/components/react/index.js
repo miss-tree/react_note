@@ -141,6 +141,8 @@ class index extends Component {
                 <Menu.Item key="204"><Link to="/react/Knowledge/CrossDomain">前端跨域</Link></Menu.Item>
                 <Menu.Item key="203"><Link to="/react/Knowledge/Pack">打包问题</Link></Menu.Item>
                 <Menu.Item key="206"><Link to="/react/Knowledge/PureComponent">PureComponent</Link></Menu.Item>
+                <Menu.Item key="222"><Link to="/react/Knowledge/useMemo">useMemo</Link></Menu.Item>
+                <Menu.Item key="235"><Link to="/react/Knowledge/useCallback">useCallback</Link></Menu.Item>
                 <Menu.Item key="205"><Link to="/react/Knowledge/Responsive">响应式设置</Link></Menu.Item>
               </SubMenu>
               <SubMenu
