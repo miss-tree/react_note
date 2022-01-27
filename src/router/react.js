@@ -59,6 +59,16 @@ let ReactRouter = {
       exact: true
     },
     {
+      path: "/react/Knowledge/useMemo",
+      component: lazy(() => import("../components/react/Knowledge/useMemo")),
+      exact: true
+    },
+    {
+      path: "/react/Knowledge/useCallback",
+      component: lazy(() => import("../components/react/Knowledge/useCallback")),
+      exact: true
+    },
+    {
       path: "/react/plugins/history",
       component: lazy(() => import("../components/react/plugins/history")),
       exact: true
