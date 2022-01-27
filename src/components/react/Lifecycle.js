@@ -1,5 +1,6 @@
-import React ,{Component} from "react";
-
+import React, { Component } from "react"; 
+// import LifePng from '../../assets/images/react/lifecycle.png';
+import LifePng from '@assets/images/react/lifecycle.png';
 class Lifecycle extends Component{
     // constructor(props){
     //      super(props)   
@@ -42,6 +43,9 @@ class Lifecycle extends Component{
                 <div>
                     <span className="red">注意</span>
                     上述生命周期函数的执行顺序
+                </div>
+                <div>
+                <img src={LifePng} alt="生命周期" rel='nofollow me noopener noreferrer'/>
                 </div>
             </div>
         );

@@ -1,13 +1,20 @@
-const { override, fixBabelImports , disableEsLint, addWebpackPlugin} = require('customize-cra');
+const { override, fixBabelImports, disableEsLint, addWebpackPlugin, addWebpackAlias} = require('customize-cra');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 const CompressionWebpackPlugin = require('compression-webpack-plugin')
 const productionGzipExtensions = ['js', 'css','png','jpg']
 const chalk = require('chalk');
+const path = require("path")
 
 
 module.exports = override(
-
+    // 默认路径设置
+    addWebpackAlias({
+      "@": path.resolve(__dirname, "./src"),
+      "@assets": path.resolve(__dirname, "./src/assets"),
+      // "@components": path.resolve(__dirname, "./src/components"),
+    }),
+    // 处理antd样式问题
     fixBabelImports('import', {
         libraryName: 'antd',
         libraryDirectory: 'es',
