@@ -12,6 +12,8 @@ const home =()=> {
           <div className="content">
             <h3 className='Title_h3'>网站终旨是前端学习笔记</h3>
             <p>本网站以为react技术栈的学习笔记demo，主要有react、nodejs、linux的笔记，不定期添加笔记内容,打通前后端。
+                <a href='https://gitee.com/miss-tree/react_note' target='_blank' rel='nofollow me noopener noreferrer'>
+                  <Icon type="github" />gitee地址</a>
               <a href='https://github.com/miss-tree/react_note' target='_blank' rel='nofollow me noopener noreferrer'>
               <Icon type="github" />github地址</a>
             </p>
@@ -48,7 +50,7 @@ const home =()=> {
               </a>
             </div>  
             <hr/>
-            <h3>VUEv后台管理系统</h3>
+            <h3>VUE 后台管理系统</h3>
             <p>
               主要是基于 vue-element-admin 框架搭建改善而来，主要的一些技术是 vue2.x 的技术，其中还包括 ES6 的一些学习笔记、
               小程序笔记、在知乎和掘金等技术博客学习笔记和自己学习 D3.js 技术的笔记。最后的一个是关于离线地图搭建的 OpenLayers 
