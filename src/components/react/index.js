@@ -6,7 +6,54 @@ import Loading from "../index/Loading"
 import { Layout, Menu, Icon } from 'antd';
 const { Sider, Content } = Layout;
 const { SubMenu } = Menu;
+let log = (type) => {
+  return function (target, name, descriptor) {
+    console.log("@log:", target);
+    console.log("@log:==>name", name);
+    console.log("@log:==>descriptor", descriptor);
+    // console.log("@log:==>descriptor 参数", descriptor.value.arguments);
+    var oldValue = descriptor.value;
+    descriptor.value = function() {
+    console.log(`Calling ${name} with`, arguments);
+      return oldValue.apply(this, arguments);
+    }
+    return descriptor
+    // let src_melethod = descriptor.value;
+    // descriptor.value = (...arg)=>{
+    //   src_melethod.apply(target, arg)
+    //   console.log(`log${type}`)
+    // }
+  }
+}
+function logA () {
+  return function (target, name, descriptor) {
+    var oldValue = descriptor.value;
 
+    descriptor.value = function () {
+      console.log(`Calling ${name} with`, Array.from(arguments));
+      return oldValue.apply(this, arguments);
+    };
+
+    return descriptor;
+  }
+}
+function logB () {
+  return function (target, name, descriptor) {
+    console.log("@log:", target);
+
+    // var oldValue = descriptor.value;
+
+    // target.newVal = function () {
+    console.log(`Calling logB with`, arguments, Array.from(arguments));
+    // };
+    // target.newVal()
+
+    return target;
+  }
+}
+
+
+@logB()
 class index extends Component {
   constructor(props) {
     super(props);
@@ -28,7 +75,12 @@ class index extends Component {
       height:bodyHeight-80
     })
   }
-  getMessage(){
+  @logA()
+  test (word){
+    console.log(`输入参数为 ${word}`);
+  }
+  @log()
+  getMessage(params){
     Axios.get("/react").then(res=>{
       console.log(res)
     })
@@ -204,4 +256,7 @@ class index extends Component {
   }
   }
 
+
+let abc = new index([{ name: '12312' }])
+abc.test({ name: '12312'})
 export default index;  
