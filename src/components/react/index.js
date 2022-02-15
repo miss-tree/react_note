@@ -195,6 +195,8 @@ class index extends Component {
                 <Menu.Item key="206"><Link to="/react/Knowledge/PureComponent">PureComponent</Link></Menu.Item>
                 <Menu.Item key="222"><Link to="/react/Knowledge/useMemo">useMemo</Link></Menu.Item>
                 <Menu.Item key="235"><Link to="/react/Knowledge/useCallback">useCallback</Link></Menu.Item>
+                <Menu.Item key="214"><Link to="/react/Knowledge/useReducer">useReducer</Link></Menu.Item>
+                <Menu.Item key="212"><Link to="/react/Knowledge/useContext">useContext</Link></Menu.Item>
                 <Menu.Item key="205"><Link to="/react/Knowledge/Responsive">响应式设置</Link></Menu.Item>
               </SubMenu>
               <SubMenu

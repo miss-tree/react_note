@@ -69,6 +69,16 @@ let ReactRouter = {
       exact: true
     },
     {
+      path: "/react/Knowledge/useReducer",
+      component: lazy(() => import("../components/react/Knowledge/useReducer")),
+      exact: true
+    },
+    {
+      path: "/react/Knowledge/useContext",
+      component: lazy(() => import("../components/react/Knowledge/useContext")),
+      exact: true
+    },
+    {
       path: "/react/plugins/history",
       component: lazy(() => import("../components/react/plugins/history")),
       exact: true
